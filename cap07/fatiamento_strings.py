@@ -1,0 +1,10 @@
+texto = 'Ser ou não ser, eis a questão'
+print('texto: ', texto)
+print('Fatiando o texto diretamente:')
+print('texto [0:3] = ', texto[0:3])
+print('Omitindo o indice inicial:')
+print('texto [:3] = ', texto[:3])
+print('Fatiando o texto com indices negativos:')
+print('texto [-7:] = ', texto[-7:])
+print('Fatiando o texto no meio:')
+print('texto [7:14] = ', texto[7:14])

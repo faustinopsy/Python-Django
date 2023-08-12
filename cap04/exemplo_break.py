@@ -1,0 +1,7 @@
+x = 0
+while(x < 10):
+    x = x + 1
+    if(x==5):
+        break
+    print(f'x = {x}')
+print('O programa terminou!')
