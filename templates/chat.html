@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("message").value;
+            fetch("/send_message", {
+                method: "POST",
+                body: new URLSearchParams({"message": message}),
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("chatlog").innerText += "Você: " + message + "\n";
+                document.getElementById("chatlog").innerText += "Chatbot: " + data.message + "\n";
+                document.getElementById("message").value = "";
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <textarea id="chatlog" readonly></textarea><br>
+    <input type="text" id="message" placeholder="Digite sua mensagem">
+    <button onclick="sendMessage()">Enviar</button><br>
+
+</body>
+</html>
