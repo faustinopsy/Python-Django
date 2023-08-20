@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
     <script>
         function trainBot() {
             var pergunta = document.getElementById("pergunta").value;
@@ -21,9 +23,12 @@
     </script>
 </head>
 <body>
-    <textarea id="chatlog" readonly></textarea><br>
-    <input type="text" id="pergunta" placeholder="Digite a pergunta">
-    <input type="text" id="resposta" placeholder="Digite a resposta">
-    <button onclick="trainBot()">Treinar</button>
+    <div class="card">
+        <a href="/">Voltar</a><br>
+        <textarea id="chatlog" readonly></textarea>
+        <input type="text" id="pergunta" placeholder="Digite a pergunta">
+        <input type="text" id="resposta" placeholder="Digite a resposta">
+        <button onclick="trainBot()">Treinar</button>
+    </div>
 </body>
 </html>
