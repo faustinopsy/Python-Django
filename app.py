@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
+import os
 
 import resposta as resp
 import treine as tre
