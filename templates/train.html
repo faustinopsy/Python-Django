@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <script>
+        function trainBot() {
+            var pergunta = document.getElementById("pergunta").value;
+            var resposta = document.getElementById("resposta").value;
+            fetch("/train_bot", {
+                method: "POST",
+                body: new URLSearchParams({"pergunta": pergunta, "resposta": resposta}),
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("chatlog").innerText += "Pergunta treinada: " + pergunta + ", Resposta treinada: " + resposta + "\n";
+            });
+        }
+    </script>
+</head>
+<body>
+    <textarea id="chatlog" readonly></textarea><br>
+    <input type="text" id="pergunta" placeholder="Digite a pergunta">
+    <input type="text" id="resposta" placeholder="Digite a resposta">
+    <button onclick="trainBot()">Treinar</button>
+</body>
+</html>
