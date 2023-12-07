@@ -9,7 +9,7 @@ O chatbot lê um arquivo de texto que contém pares de perguntas e respostas e u
 ## Configuração
 
 1. Clone o repositório:
-  - git clone [Python-Django](https://github.com/faustinopsy/Python-Django)
+  - git clone [Python-Flask](https://github.com/faustinopsy/Python-Flask)
 2. Instale as dependências necessárias:
   -  pip install Flask
 3. Inicie o aplicativo Flask: (ainda que o nome do diretorio é django foi utilizado o flask por ser minimalista para o proposito do projeto)
